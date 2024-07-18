@@ -1,6 +1,6 @@
 const inputBox = document.getElementById('input-box');
 const listContainer = document.querySelector('.container-list');
-const imageUrl = 'assets/close-icon.png'; 
+
 
 document.querySelector('button').onclick = addTask
 
@@ -9,7 +9,7 @@ function addTask(){
         alert('Add a task to proceed')
     }else{
         let li = document.createElement('li');
-        li.innerHTML = inputBox.value
+        li.innerHTML = inputBox.value   
         listContainer.appendChild(li);
         let span = document.createElement('span');
         span.innerHTML = '\u00D7';

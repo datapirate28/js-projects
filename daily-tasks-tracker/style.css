@@ -17,7 +17,7 @@
 
 .to-do-app{
     width: 100%;
-    max-width: 450px;
+    max-width: 450px;   
     margin: 70px auto 40px;
     padding: 20px 30px 50px ;
     background-color: whitesmoke;
@@ -120,7 +120,7 @@ span:hover{
 
 
 ul li.checked{
-    color: #555;
+    color: #aba8a8;
     text-decoration: line-through;
 }
 
