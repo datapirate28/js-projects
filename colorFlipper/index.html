@@ -4,8 +4,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color Flipper</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-color: gray;">
+
+    <div class="container">
+        <h2>Background Color:
+            <span class="color">
+                #F1f5f8
+            </span>
+        </h2>
+        
+    </div>
+    <button class="btn btn-hero" id="btn">
+        Click Me
+    </button>
+
+    <script>
+
+        // the color change is limited to three colors
+
+        // const colors = ['red', 'blue', 'green'];
+        
+        // const btn = document.querySelector('.btn');
+        // const color = document.querySelector('.color')
+        // const body = document.querySelector('body');
+
+        // btn.addEventListener('click', function(){
+        //     let randomNo = getARandomNum(); 
+        //     body.style.backgroundColor = colors[randomNo]
+        //     color.innerText = colors[randomNo]
+        // })
+
+        // function getARandomNum(){
+        //     return Math.floor(Math.random() * colors.length) 
+        // }
+
+
+
+        // now we will set the color unlimited random colors when clicked
+
+        const hexColor = [0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F'];
+
+        const btn = document.querySelector('.btn');
+        const colorText = document.querySelector('.color');
+        const body = document.querySelector('body');
+
+        btn.addEventListener('click', function(){
+            let hex = '#';
+            for(let i = 0; i<6; i++){
+                hex += hexColor[getARandomNum()];
+            }
+
+            body.style.backgroundColor = hex
+            colorText.innerText = hex
+        })
+
+        function getARandomNum(){
+            return Math.floor(Math.random() * hexColor.length);
+        }
+
+    </script>
     
 </body>
 </html>
