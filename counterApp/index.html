@@ -18,5 +18,35 @@
         </div>
     </div>
     
+
+    <script>
+        let counter = 0;
+        const decreaseBtn = document.querySelector('.decrease');
+        const increaseBtn = document.querySelector('.increase');
+        const resetBtn = document.querySelector('.reset');
+        const value = document.querySelector('#value')
+
+
+        // increase Value
+        increaseBtn.addEventListener('click', function() {
+        counter += 1;
+        value.innerText = counter
+        value.style.color = 'green'
+        });
+
+        // reset Value
+        resetBtn.addEventListener('click', function() {
+        counter = 0;
+        value.innerText = counter
+        });
+
+        // decrease Value
+        decreaseBtn.addEventListener('click', function() {
+        counter -= 1;
+        value.innerText = counter
+        value.style.color = 'red'
+        });
+
+    </script>
 </body>
 </html>
